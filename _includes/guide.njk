@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+<article class="guide">
+  <p class="updated">Last updated: {{ updated | readableDate }}</p>
+  <h1>{{ title }}</h1>
+
+  <div class="answer-box">{{ answer }}</div>
+
+  <div class="guide-body">
+    {{ content | safe }}
+  </div>
+
+  {% if faqs and faqs.length %}
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    {% for f in faqs %}
+    <h3>{{ f.q }}</h3>
+    <p>{{ f.a }}</p>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if sources and sources.length %}
+  <section class="sources">
+    <h2>Sources &amp; methodology</h2>
+    <ul>
+      {% for s in sources %}
+      <li>{{ s }}</li>
+      {% endfor %}
+    </ul>
+    <p class="sources-note">See <a href="/methodology/">how we build these ranges</a>. Spot an outdated number? <a href="/about/">Tell us.</a></p>
+  </section>
+  {% endif %}
+</article>
+<script type="application/ld+json">{{ {title: title, description: description, updated: updated, faqs: faqs} | guideJsonLd | safe }}</script>

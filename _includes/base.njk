@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} — North Texas Home Costs</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="/">NTX<span>HomeCosts</span></a>
+      <nav>
+        <a href="/guides/">Cost Guides</a>
+        <a href="/methodology/">How We Price</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    {{ content | safe }}
+  </main>
+  <footer class="botbar">
+    <div class="wrap">
+      <p>North Texas Home Costs — independent cost research for DFW homeowners. Estimates are ranges, not quotes; always get written, itemized bids.</p>
+      <p><a href="/about/">About</a> · <a href="/methodology/">Methodology</a> · <a href="/guides/">All guides</a></p>
+    </div>
+  </footer>
+</body>
+</html>

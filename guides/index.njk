@@ -1,0 +1,25 @@
+---
+title: All cost guides
+description: Every North Texas cost guide we publish — researched price ranges for DFW home repairs and upgrades.
+layout: base.njk
+permalink: /guides/
+---
+<h1>All cost guides</h1>
+<p class="lede">Every guide below is a researched range for the Dallas–Fort Worth market — not a quote, and not a lead form. Each one lists its sources and a last-updated date.</p>
+
+{% if collections.guides.length %}
+<div class="cards">
+  {% for g in collections.guides %}
+  <a class="card" href="{{ g.url }}">
+    <h3>{{ g.data.title }}</h3>
+    <p>{{ g.data.description }}</p>
+    <span class="meta-row">
+      {% if g.data.category %}<span class="tag">{{ g.data.category }}</span>{% endif %}
+      <span class="updated">Updated {{ g.data.updated | readableDate }}</span>
+    </span>
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty-note">First cost guides are in research now. Check back soon, or read <a href="/methodology/">how we price</a> in the meantime.</p>
+{% endif %}
