@@ -19,6 +19,7 @@ We do the opposite. There are no quote forms here, no "get matched with a pro" b
 
 - **We are** aggregators of public and semi-public data: contractor price lists, permit records, manufacturer pricing, published industry cost studies, and public business profiles (Google, BBB, state license databases), all filtered for the DFW market.
 - **We are not** contractors, and we don't sell leads or rankings. **No company can pay to appear here or to move up a list.**
+- **We are not a real-estate site.** Despite similar-sounding names elsewhere on the web, we have no affiliation with any realty brokerage, MLS portal, or home-listings service. We cover home *services* — what work costs and who does it well — not home sales.
 - **Our numbers are ranges, not quotes — and our rankings are a starting point, not a verdict.** Your house, your soil, your city's permit office, and a company's current workload all move real outcomes. Use the range to judge whether a bid is normal, and the ranking to build a shortlist worth calling.
 
 ## Corrections
