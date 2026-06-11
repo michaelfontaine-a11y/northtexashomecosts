@@ -99,6 +99,7 @@ permalink: /tools/ac-cost-calculator/
     if (duct.value === "1") { low += 3000; high += 6000; }
     rangeEl.textContent = money(low) + "–" + money(high);
     subEl.textContent = "Estimated installed price · " + TIERLABEL[tier.value] + " " + t + "-ton" + (duct.value === "1" ? " with new ductwork" : " on existing ducts");
+    rangeEl.classList.remove("pulse"); void rangeEl.offsetWidth; rangeEl.classList.add("pulse");
   }
   [size, tier, duct].forEach(function (el) { el.addEventListener("change", compute); });
   compute();

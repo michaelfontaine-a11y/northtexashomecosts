@@ -374,7 +374,9 @@ tbody tr:hover { background: var(--teal-tint); }
 .calc-field label { display: block; font-weight: 700; color: var(--navy); margin-bottom: .35rem; font-size: .92rem; }
 .calc-field select, .calc-field input { width: 100%; padding: .6rem .7rem; border: 1px solid var(--line); border-radius: 8px; font-size: 1rem; background: #fff; }
 .calc-result { margin-top: 1.3rem; background: #fff; border: 2px solid var(--teal); border-radius: 12px; padding: 1.1rem 1.2rem; text-align: center; }
-.calc-range { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
+.calc-range { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.calc-range.pulse { animation: rangePulse .45s cubic-bezier(.2,.7,.3,1.2); }
+@keyframes rangePulse { 0% { transform: scale(.94); opacity: .55; } 100% { transform: scale(1); opacity: 1; } }
 .calc-sub { color: var(--muted); font-size: .92rem; margin-top: .3rem; }
 .calc-cta { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
 
@@ -413,4 +415,37 @@ tbody tr:hover { background: var(--teal-tint); }
 @media (max-width: 640px) {
   .hero-band { padding: 2.2rem 1.4rem; }
   .hero-band h1 { font-size: 1.9rem; }
+}
+
+/* ================= Polish pass 1 — typography, glass, motion ================= */
+@view-transition { navigation: auto; }
+html { scroll-behavior: smooth; }
+
+body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+h1, h2, .sec-title, .hero-band h1, .cta-band h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; letter-spacing: -0.015em; }
+.hero-band h1 { font-size: 2.7rem; line-height: 1.08; }
+.hero-sub { font-weight: 400; }
+table { font-variant-numeric: tabular-nums; }
+
+::selection { background: var(--teal); color: #fff; }
+a:focus-visible, .btn:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid rgba(14,124,123,.45); outline-offset: 2px; border-radius: 6px; }
+
+/* glass sticky header */
+.topbar { position: sticky; top: 0; z-index: 60; background: rgba(14,34,54,.82); -webkit-backdrop-filter: saturate(160%) blur(12px); backdrop-filter: saturate(160%) blur(12px); }
+
+/* springy interactive physics */
+.btn, .card, .cat-card, .rv-card, .topbar nav a { transition: transform .22s cubic-bezier(.2,.7,.2,1.2), box-shadow .22s ease, background .18s ease, border-color .18s ease, color .18s ease; }
+.btn:hover { transform: translateY(-1.5px); }
+.btn:active { transform: translateY(0) scale(.97); }
+.card { display: block; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(22,50,79,.13); border-color: var(--teal); }
+.cat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(22,50,79,.16); }
+.rv-card:hover { box-shadow: 0 8px 20px rgba(22,50,79,.10); }
+
+/* scroll reveal (JS adds .reveal; no-JS users see everything) */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s cubic-bezier(.2,.7,.2,1), transform .65s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
 }
