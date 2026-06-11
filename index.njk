@@ -4,10 +4,10 @@ description: Independent rankings of the best HVAC, plumbing, roofing and home-s
 layout: base.njk
 ---
 {% set catMeta = {
-  "Heating & Cooling": { color: "#0e7c7b", blurb: "AC replacement & repair, furnaces, heat pumps, tune-ups." },
-  "Plumbing & Systems": { color: "#1d6fa5", blurb: "Water heaters, repairs, electrical panels and home systems." },
-  "Structure & Exterior": { color: "#8a5a3c", blurb: "Roofing, foundation, windows and exterior work." },
-  "Outdoor": { color: "#3b7a3b", blurb: "Fencing, pools and outdoor living projects." }
+  "Heating & Cooling": { color: "#0e7c7b", url: "/heating-cooling/", blurb: "AC replacement & repair, furnaces, heat pumps, tune-ups." },
+  "Plumbing & Systems": { color: "#1d6fa5", url: "/plumbing-systems/", blurb: "Water heaters, repairs, electrical panels and home systems." },
+  "Structure & Exterior": { color: "#8a5a3c", url: "/structure-exterior/", blurb: "Roofing, foundation, windows and exterior work." },
+  "Outdoor": { color: "#3b7a3b", url: "/outdoor/", blurb: "Fencing, pools and outdoor living projects." }
 } %}
 
 <section class="hero-band"{% if photos.hero %} style="background-image: linear-gradient(135deg, rgba(14,34,54,.94) 0%, rgba(22,50,79,.84) 50%, rgba(14,124,123,.62) 170%), url('{{ photos.hero.url }}'); background-size: cover; background-position: center;"{% endif %}>
@@ -16,7 +16,7 @@ layout: base.njk
     <h1>Find the best home-service pros in North Texas — and know the price first</h1>
     <p class="hero-sub">We rank local HVAC, plumbing, roofing and home-service companies on a published methodology, and research what the work actually costs — so you can hire with confidence and walk into any bid knowing what's normal. No lead-gen forms.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="/best-hvac/">Find a pro</a>
+      <a class="btn btn-primary" href="/best/">Find a pro</a>
       <a class="btn btn-ghost-light" href="/guides/">See what it costs</a>
     </div>
   </div>
@@ -34,7 +34,7 @@ layout: base.njk
       {% set count = 0 %}
       {% for g in collections.guides %}{% if g.data.category == cat %}{% set count = count + 1 %}{% endif %}{% endfor %}
       {% set m = catMeta[cat] %}
-      <a class="cat-card" href="/guides/">
+      <a class="cat-card" href="{{ m.url if m else '/guides/' }}">
         <div class="cat-img" style="background-color: {{ m.color if m else '#16324f' }}{% if photos[cat] %}; background-image: url('{{ photos[cat].url }}'){% endif %}"><span>{{ cat }}</span></div>
         <div class="cat-body">
           <p class="cat-blurb">{{ m.blurb if m else 'Researched cost guides for North Texas homeowners.' }}</p>
@@ -46,21 +46,24 @@ layout: base.njk
 </section>
 {% endif %}
 
-{% if collections.reviews.length %}
 <section>
-  <h2 class="sec-title">Best HVAC companies, by city</h2>
-  <p class="sec-sub">Independent rankings on installation, pricing, warranty and verified ratings — sources cited, updated monthly.</p>
+  <h2 class="sec-title">Independent company rankings</h2>
+  <p class="sec-sub">Real local companies, scored on verified ratings, experience, pricing transparency and licensing — sources cited, no paid placement, updated monthly.</p>
   <div class="cards">
-    {% for r in collections.reviews %}
+    {% for r in collections.rankings %}
     <a class="card" href="{{ r.url }}">
-      <h3>Best HVAC in {{ r.data.cityName }}</h3>
+      <h3>{{ r.data.title }}</h3>
       <p>{{ r.data.cardBlurb }}</p>
       <span class="meta-row"><span class="tag">{{ r.data.placement }}</span><span class="updated">Updated {{ r.data.updated | readableDate }}</span></span>
     </a>
     {% endfor %}
+    <a class="card" href="/best-hvac/">
+      <h3>Best HVAC companies, by city</h3>
+      <p>City-by-city HVAC rankings for Frisco, Plano, Carrollton, Prosper, Celina and Garland.</p>
+      <span class="meta-row"><span class="tag">6 cities</span><span class="updated">Updated June 11, 2026</span></span>
+    </a>
   </div>
 </section>
-{% endif %}
 
 {% if collections.guides.length %}
 <section>
@@ -82,8 +85,8 @@ layout: base.njk
 
 <section class="cta-band">
   <div>
-    <h2>Estimate your new AC in 30 seconds</h2>
-    <p>See what a replacement costs for your North Texas home — by size, efficiency and ductwork. No email, no sales call.</p>
+    <h2>Know the price before anyone quotes you</h2>
+    <p>Instant cost calculators for AC replacement, water heaters and roofs — researched DFW ranges, no email, no sales call.</p>
   </div>
-  <a class="btn btn-primary" href="/tools/ac-cost-calculator/">Open the calculator →</a>
+  <a class="btn btn-primary" href="/tools/">Open the calculators →</a>
 </section>

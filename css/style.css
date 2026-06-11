@@ -417,6 +417,12 @@ tbody tr:hover { background: var(--teal-tint); }
   .hero-band h1 { font-size: 1.9rem; }
 }
 
+/* ================= Category landing pages ================= */
+.cat-hero { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--teal) 170%); color: #fff; border-radius: 16px; padding: 2.6rem 2rem; margin: 0 0 1.8rem; }
+.cat-hero h1 { color: #fff; font-size: 2.2rem; line-height: 1.12; margin: .2rem 0 .8rem; max-width: 38rem; }
+.cat-hero .hero-sub { color: #d7e6ee; font-size: 1.08rem; max-width: 42rem; margin: 0; }
+.cat-links { display: flex; flex-wrap: wrap; gap: .7rem; margin: 0 0 .6rem; }
+
 /* ================= Polish pass 1 — typography, glass, motion ================= */
 @view-transition { navigation: auto; }
 html { scroll-behavior: smooth; }

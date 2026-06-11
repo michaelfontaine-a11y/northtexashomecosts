@@ -1,0 +1,30 @@
+---
+title: "Roofing, Foundation & Exterior in North Texas"
+description: "Roof replacement, foundation repair, windows and exterior projects in Dallas–Fort Worth — hail-belt realities and researched price ranges."
+layout: base.njk
+permalink: /structure-exterior/
+---
+<header class="cat-hero"{% if photos["Structure & Exterior"] %} style="background-image: linear-gradient(135deg, rgba(14,34,54,.92) 0%, rgba(22,50,79,.78) 60%, rgba(14,124,123,.55) 170%), url('{{ photos["Structure & Exterior"].url }}'); background-size: cover; background-position: center;"{% endif %}>
+  <p class="hero-eyebrow">North Texas · Structure & Exterior</p>
+  <h1>Roofing, Foundation & Exterior in North Texas</h1>
+  <p class="hero-sub">Between spring hail and clay-soil movement, DFW homes work harder than most. These guides cover the big structural tickets — roofs, foundations, windows — and how insurance and soil change the math here.</p>
+</header>
+
+<div class="cat-links"><a class="btn btn-primary" href="/tools/roof-cost-calculator/">Roof cost calculator →</a></div>
+
+<section>
+  <h2 class="sec-title">Cost guides</h2>
+  <div class="cards">
+    {% for g in collections.guides %}{% if g.data.category == "Structure & Exterior" %}
+    <a class="card" href="{{ g.url }}">
+      <h3>{{ g.data.title }}</h3>
+      <p>{{ g.data.description }}</p>
+      <span class="updated">Updated {{ g.data.updated | readableDate }}</span>
+    </a>
+    {% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="cat-group">
+  <p class="lede">Every range is researched for the Dallas–Fort Worth market — see <a href="/methodology/">how we build these numbers</a>, or browse <a href="/guides/">all cost guides</a>.</p>
+</section>

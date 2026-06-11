@@ -9,9 +9,9 @@ permalink: /methodology/
 
 We do two things: rank the best home-service companies city by city, and research what projects actually cost. Both are done in the open, and every page lists its sources.
 
-## How we rank HVAC companies
+## How we rank local companies
 
-Our city "best HVAC" lists score each company on five factors, weighted toward what matters for a major installation:
+Our "best of" lists — HVAC by city, plus plumbers, roofers and electricians across the metro — score each company on five factors, weighted toward what matters for a major project:
 
 - **Warranty coverage** — length of the labor warranty on a new install (most local installers cover 1–2 years; the best cover 10).
 - **Pricing transparency** — whether the company gives upfront, written or flat-rate pricing rather than vague "call for a quote."

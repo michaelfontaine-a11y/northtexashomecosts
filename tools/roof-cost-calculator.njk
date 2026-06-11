@@ -1,0 +1,95 @@
+---
+title: Roof Replacement Cost Calculator for North Texas (2026)
+description: Estimate what a roof replacement costs in Dallas–Fort Worth in 2026 by home size, stories and material — 3-tab, architectural, Class 4 impact-resistant or metal. Instant range.
+layout: base.njk
+permalink: /tools/roof-cost-calculator/
+---
+{% raw %}
+<article class="rv">
+  <header>
+    <p class="rv-eyebrow">North Texas · Updated June 2026</p>
+    <h1>Roof Replacement Cost Calculator (North Texas, 2026)</h1>
+    <p class="rv-lead">Most Dallas–Fort Worth homeowners pay <strong>$9,500–$18,000</strong> for a full asphalt-shingle roof replacement in 2026 — roughly <strong>$4.75–$7.50 per square foot installed</strong>. Class 4 impact-resistant shingles (the hail-belt favorite) run $12,000–$18,000, and standing-seam metal $18,000–$35,000. Estimate your roof below.</p>
+  </header>
+
+  <div class="calc">
+    <div class="calc-row">
+      <div class="calc-field">
+        <label for="rf-size">Home size (living sq ft)</label>
+        <select id="rf-size">
+          <option value="1400">Under 1,600 sq ft</option>
+          <option value="1900" selected>1,600–2,200 sq ft</option>
+          <option value="2500">2,200–2,800 sq ft</option>
+          <option value="3200">2,800–3,600 sq ft</option>
+          <option value="4000">3,600+ sq ft</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label for="rf-stories">Stories</label>
+        <select id="rf-stories">
+          <option value="1" selected>Single story</option>
+          <option value="2">Two story</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label for="rf-mat">Material</label>
+        <select id="rf-mat">
+          <option value="threetab">3-tab shingles (basic)</option>
+          <option value="arch" selected>Architectural shingles (most common)</option>
+          <option value="class4">Class 4 impact-resistant</option>
+          <option value="metal">Standing-seam metal</option>
+        </select>
+      </div>
+    </div>
+    <div class="calc-result">
+      <div class="calc-range" id="rf-range">$12,600–$17,300</div>
+      <div class="calc-sub" id="rf-sub">Estimated installed price · architectural shingles</div>
+    </div>
+  </div>
+
+  <p class="rv-weights">Researched estimate for the DFW market — not a quote. Pitch, decking condition and hail-season demand move real bids. Full breakdown (including insurance and hail factors): <a href="/guides/roof-replacement-cost-dfw/">roof replacement cost guide</a>.</p>
+
+  <h2>What moves your price</h2>
+  <ul>
+    <li><strong>Material.</strong> 3-tab is cheapest; Class 4 impact-resistant shingles cost more upfront but many Texas insurers discount premiums for them (UL 2218 rated).</li>
+    <li><strong>Pitch and stories.</strong> Steep or two-story roofs add labor and safety setup.</li>
+    <li><strong>Decking condition.</strong> Rotten decking discovered mid-job adds per-sheet replacement costs.</li>
+    <li><strong>Timing.</strong> Spring hail season spikes demand — fall and winter bids often come in lower.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <div class="rv-q"><h3>How much does a roof replacement cost in DFW?</h3><p>Most homeowners pay $9,500–$18,000 for asphalt shingles in 2026, about $4.75–$7.50 per square foot installed. The metro median lands around $12,500–$15,000.</p></div>
+  <div class="rv-q"><h3>Are Class 4 impact-resistant shingles worth it in North Texas?</h3><p>Usually, yes. They run $12,000–$18,000 installed, but many Texas insurers offer premium discounts for UL 2218 Class 4 roofs — meaningful in a hail belt where roofs get replaced every 10–15 years.</p></div>
+  <div class="rv-q"><h3>Will insurance pay for my roof after hail?</h3><p>If a storm caused the damage, often yes minus your deductible — but Texas law forbids contractors from waiving or absorbing deductibles. Treat any roofer offering a "free roof" as a red flag.</p></div>
+
+  <section class="rv-cta">
+    <h2>Planning the bigger picture?</h2>
+    <p>See every researched DFW cost range — roofs, foundations, windows and more.</p>
+    <div class="rv-cta-row"><a class="btn btn-primary" href="/guides/">Browse all cost guides →</a></div>
+  </section>
+
+  <p class="rv-byline">Estimates updated June 2026 by The North Texas Home Guide, from DFW roofer price guides and national cost surveys. Not a quote — always get a written, itemized bid.</p>
+</article>
+
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"Roof Replacement Cost Calculator for North Texas (2026)","description":"Estimate roof replacement cost in Dallas-Fort Worth by home size, stories and material.","dateModified":"2026-06-11","author":{"@type":"Organization","name":"The North Texas Home Guide"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a roof replacement cost in DFW?","acceptedAnswer":{"@type":"Answer","text":"Most homeowners pay $9,500-$18,000 for asphalt shingles in 2026, about $4.75-$7.50 per square foot installed, with a metro median around $12,500-$15,000."}},{"@type":"Question","name":"Are Class 4 impact-resistant shingles worth it in North Texas?","acceptedAnswer":{"@type":"Answer","text":"Usually yes - they run $12,000-$18,000 installed but many Texas insurers offer premium discounts for UL 2218 Class 4 roofs."}},{"@type":"Question","name":"Will insurance pay for my roof after hail?","acceptedAnswer":{"@type":"Answer","text":"If a storm caused the damage, often yes minus your deductible - but Texas law forbids contractors from waiving deductibles."}}]}]</script>
+
+<script>
+(function () {
+  var PSF = { threetab: [4.25, 5.5], arch: [4.75, 6.5], class4: [6.0, 8.0], metal: [9.0, 16.0] };
+  var LABEL = { threetab: "3-tab shingles", arch: "architectural shingles", class4: "Class 4 impact-resistant", metal: "standing-seam metal" };
+  var size = document.getElementById("rf-size"), stories = document.getElementById("rf-stories"), mat = document.getElementById("rf-mat");
+  var rangeEl = document.getElementById("rf-range"), subEl = document.getElementById("rf-sub");
+  function money(n) { return "$" + (Math.round(n / 100) * 100).toLocaleString("en-US"); }
+  function compute() {
+    var living = parseInt(size.value, 10), s = parseInt(stories.value, 10);
+    var roofArea = (living / s) * 1.4;
+    var p = PSF[mat.value];
+    rangeEl.textContent = money(roofArea * p[0]) + "–" + money(roofArea * p[1]);
+    subEl.textContent = "Estimated installed price · " + LABEL[mat.value] + (s === 2 ? " · two story" : "");
+    rangeEl.classList.remove("pulse"); void rangeEl.offsetWidth; rangeEl.classList.add("pulse");
+  }
+  [size, stories, mat].forEach(function (el) { el.addEventListener("change", compute); });
+  compute();
+})();
+</script>
+{% endraw %}

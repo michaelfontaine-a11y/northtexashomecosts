@@ -106,5 +106,41 @@
     "alt": "Serene backyard featuring a swimming pool, lush garden, and wooden deck in Antalya, Turkey.",
     "photographer": "Engin Akyurt",
     "id": 4177666
+  },
+  "best-plumbers-north-texas": {
+    "url": "https://images.pexels.com/photos/7859953/pexels-photo-7859953.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Close-up of hands adjusting a boiler system with precise instrumentation, showing maintenance work.",
+    "photographer": "Heiko Ruth",
+    "id": 7859953
+  },
+  "best-roofers-north-texas": {
+    "url": "https://images.pexels.com/photos/33404248/pexels-photo-33404248.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Roofer using nail gun for shingle installation on residential roof.",
+    "photographer": "Ryan  Stephens",
+    "id": 33404248
+  },
+  "best-electricians-north-texas": {
+    "url": "https://images.pexels.com/photos/17924298/pexels-photo-17924298.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "An electrician works on an outdoor fusebox, ensuring safety and functionality.",
+    "photographer": "Fatih Yurtman",
+    "id": 17924298
+  },
+  "interior-painting-cost-dfw": {
+    "url": "https://images.pexels.com/photos/5583052/pexels-photo-5583052.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Two paint rollers over a wooden surface, perfect for home renovation concepts.",
+    "photographer": "Polina Tankilevitch",
+    "id": 5583052
+  },
+  "garage-door-replacement-cost-dfw": {
+    "url": "https://images.pexels.com/photos/37124334/pexels-photo-37124334.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Monochrome photo of an urban building facade with garages and doors.",
+    "photographer": "Peter Dyllong",
+    "id": 37124334
+  },
+  "landscaping-cost-dfw": {
+    "url": "https://images.pexels.com/photos/33350017/pexels-photo-33350017.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Beautiful suburban home with manicured garden and diverse greenery, capturing modern residential architecture.",
+    "photographer": "Mingyang LIU",
+    "id": 33350017
   }
 }

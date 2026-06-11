@@ -1,0 +1,41 @@
+---
+title: Find the Best Home-Service Companies in North Texas (2026)
+description: Independent rankings of the best HVAC, plumbing, roofing and electrical companies in Dallas–Fort Worth — scored on a published methodology with sourced figures. No paid placement.
+layout: base.njk
+permalink: /best/
+---
+<section class="hero">
+  <h1>Find the best pros in North Texas</h1>
+  <p class="lede">Every ranking scores real local companies on verified ratings, experience, pricing transparency, warranty and licensing — figures sourced from public profiles, updated monthly, and <strong>no company pays for placement</strong>. Read the full <a href="/methodology/">methodology</a>.</p>
+</section>
+
+{% if collections.rankings.length %}
+<section>
+  <h2 class="sec-title">By trade</h2>
+  <div class="cards">
+    {% for r in collections.rankings %}
+    <a class="card" href="{{ r.url }}">
+      <h3>{{ r.data.title }}</h3>
+      <p>{{ r.data.cardBlurb }}</p>
+      <span class="meta-row"><span class="tag">{{ r.data.placement }}</span><span class="updated">Updated {{ r.data.updated | readableDate }}</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if collections.reviews.length %}
+<section>
+  <h2 class="sec-title">HVAC, city by city</h2>
+  <p class="sec-sub">Cooling is DFW's biggest home-system expense, so HVAC gets the deepest coverage — one ranking per city.</p>
+  <div class="cards">
+    {% for r in collections.reviews %}
+    <a class="card" href="{{ r.url }}">
+      <h3>Best HVAC in {{ r.data.cityName }}</h3>
+      <p>{{ r.data.cardBlurb }}</p>
+      <span class="meta-row"><span class="tag">{{ r.data.placement }}</span><span class="updated">Updated {{ r.data.updated | readableDate }}</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

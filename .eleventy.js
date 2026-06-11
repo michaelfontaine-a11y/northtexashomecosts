@@ -40,6 +40,10 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByGlob("reviews/*.njk").sort((a, b) => (a.data.sortOrder || 99) - (b.data.sortOrder || 99))
   );
 
+  eleventyConfig.addCollection("rankings", (api) =>
+    api.getFilteredByGlob("rankings/*.njk").sort((a, b) => (a.data.sortOrder || 99) - (b.data.sortOrder || 99))
+  );
+
   return {
     dir: { input: ".", includes: "_includes", output: "_site" },
     markdownTemplateEngine: false,

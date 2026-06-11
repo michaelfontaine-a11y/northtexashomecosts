@@ -1,0 +1,30 @@
+---
+title: "Outdoor & Yard Projects in North Texas"
+description: "Fencing, pools and outdoor living in Dallas–Fort Worth — researched cost ranges for the projects Texas yards actually need."
+layout: base.njk
+permalink: /outdoor/
+---
+<header class="cat-hero"{% if photos["Outdoor"] %} style="background-image: linear-gradient(135deg, rgba(14,34,54,.92) 0%, rgba(22,50,79,.78) 60%, rgba(14,124,123,.55) 170%), url('{{ photos["Outdoor"].url }}'); background-size: cover; background-position: center;"{% endif %}>
+  <p class="hero-eyebrow">North Texas · Outdoor</p>
+  <h1>Outdoor & Yard Projects in North Texas</h1>
+  <p class="hero-sub">Texas heat is hard on fences, pools and lawns. These guides cover what outdoor work costs across DFW and which factors — soil, sun, HOA rules — move the quotes.</p>
+</header>
+
+
+
+<section>
+  <h2 class="sec-title">Cost guides</h2>
+  <div class="cards">
+    {% for g in collections.guides %}{% if g.data.category == "Outdoor" %}
+    <a class="card" href="{{ g.url }}">
+      <h3>{{ g.data.title }}</h3>
+      <p>{{ g.data.description }}</p>
+      <span class="updated">Updated {{ g.data.updated | readableDate }}</span>
+    </a>
+    {% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="cat-group">
+  <p class="lede">Every range is researched for the Dallas–Fort Worth market — see <a href="/methodology/">how we build these numbers</a>, or browse <a href="/guides/">all cost guides</a>.</p>
+</section>

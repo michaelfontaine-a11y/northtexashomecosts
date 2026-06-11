@@ -1,0 +1,30 @@
+---
+title: "Plumbing & Home Systems in North Texas"
+description: "Water heaters, plumbing repairs and electrical panels in Dallas–Fort Worth — researched cost ranges and what drives DFW quotes."
+layout: base.njk
+permalink: /plumbing-systems/
+---
+<header class="cat-hero"{% if photos["Plumbing & Systems"] %} style="background-image: linear-gradient(135deg, rgba(14,34,54,.92) 0%, rgba(22,50,79,.78) 60%, rgba(14,124,123,.55) 170%), url('{{ photos["Plumbing & Systems"].url }}'); background-size: cover; background-position: center;"{% endif %}>
+  <p class="hero-eyebrow">North Texas · Plumbing & Systems</p>
+  <h1>Plumbing & Home Systems in North Texas</h1>
+  <p class="hero-sub">Slab foundations and expansive clay make North Texas plumbing its own animal — under-slab leaks mean tunneling, and code upgrades ride along with most water-heater swaps. Here's what the common jobs cost.</p>
+</header>
+
+<div class="cat-links"><a class="btn btn-primary" href="/tools/water-heater-cost-calculator/">Water heater cost calculator →</a></div>
+
+<section>
+  <h2 class="sec-title">Cost guides</h2>
+  <div class="cards">
+    {% for g in collections.guides %}{% if g.data.category == "Plumbing & Systems" %}
+    <a class="card" href="{{ g.url }}">
+      <h3>{{ g.data.title }}</h3>
+      <p>{{ g.data.description }}</p>
+      <span class="updated">Updated {{ g.data.updated | readableDate }}</span>
+    </a>
+    {% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="cat-group">
+  <p class="lede">Every range is researched for the Dallas–Fort Worth market — see <a href="/methodology/">how we build these numbers</a>, or browse <a href="/guides/">all cost guides</a>.</p>
+</section>

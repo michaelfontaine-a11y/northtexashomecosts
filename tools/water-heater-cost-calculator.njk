@@ -1,0 +1,84 @@
+---
+title: Water Heater Replacement Cost Calculator for North Texas (2026)
+description: Estimate what a water heater replacement costs in Dallas–Fort Worth in 2026 — tank vs. tankless, gas vs. electric, plus DFW code-upgrade items. Instant range, no email.
+layout: base.njk
+permalink: /tools/water-heater-cost-calculator/
+---
+{% raw %}
+<article class="rv">
+  <header>
+    <p class="rv-eyebrow">North Texas · Updated June 2026</p>
+    <h1>Water Heater Cost Calculator (North Texas, 2026)</h1>
+    <p class="rv-lead">A standard 40–50 gallon tank water heater replacement costs <strong>$1,200–$2,800 installed</strong> in Dallas–Fort Worth, with most like-for-like gas swaps landing <strong>$1,300–$1,900</strong>. Tankless conversions run <strong>$4,500–$10,000</strong> with gas-line and venting work. Estimate your job below.</p>
+  </header>
+
+  <div class="calc">
+    <div class="calc-row">
+      <div class="calc-field">
+        <label for="wh-type">Replacement type</label>
+        <select id="wh-type">
+          <option value="gas" selected>Gas tank, like-for-like (40–50 gal)</option>
+          <option value="electric">Electric tank (40–50 gal)</option>
+          <option value="power">Power-vent gas tank</option>
+          <option value="tankless">Tankless conversion (gas)</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label for="wh-code">Code upgrades (expansion tank, pan, T&amp;P)</label>
+        <select id="wh-code">
+          <option value="1" selected>Include (most DFW cities require them)</option>
+          <option value="0">Already up to code</option>
+        </select>
+      </div>
+    </div>
+    <div class="calc-result">
+      <div class="calc-range" id="wh-range">$1,500–$2,500</div>
+      <div class="calc-sub" id="wh-sub">Estimated installed price · gas tank with code upgrades</div>
+    </div>
+  </div>
+
+  <p class="rv-weights">Researched estimate for the DFW market — not a quote. Texas requires a permit and a licensed plumber for water heater replacement. Full breakdown: <a href="/guides/water-heater-replacement-cost-dfw/">water heater cost guide</a>.</p>
+
+  <h2>What moves your price</h2>
+  <ul>
+    <li><strong>Fuel and venting.</strong> Power-vent and tankless units cost more in both equipment and labor.</li>
+    <li><strong>Code items.</strong> Expansion tank, drain pan and T&amp;P discharge updates add a few hundred dollars to most DFW quotes.</li>
+    <li><strong>Location in the home.</strong> Attic installs (common in North Texas) add labor and a pan/drain requirement.</li>
+    <li><strong>Tankless conversions.</strong> Larger gas line, new venting and electrical typically push conversions past $4,500.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <div class="rv-q"><h3>How much does water heater replacement cost in DFW?</h3><p>Most standard 40–50 gallon tank replacements cost $1,200–$2,800 installed in 2026; like-for-like gas swaps usually land $1,300–$1,900. Tankless conversions run $4,500–$10,000.</p></div>
+  <div class="rv-q"><h3>Do I need a permit to replace a water heater in Texas?</h3><p>Yes — Texas requires a permit and a licensed plumber for water heater replacement, and most DFW cities inspect the work. A quote that skips the permit is a red flag.</p></div>
+  <div class="rv-q"><h3>Is tankless worth it in North Texas?</h3><p>Tankless costs 2–4× more upfront but lasts roughly twice as long (20+ years vs. 8–12) and saves space. It pays off most in larger households with high hot-water use.</p></div>
+
+  <section class="rv-cta">
+    <h2>Planning the bigger picture?</h2>
+    <p>See every researched DFW cost range — from plumbing repairs to full system replacements.</p>
+    <div class="rv-cta-row"><a class="btn btn-primary" href="/guides/">Browse all cost guides →</a></div>
+  </section>
+
+  <p class="rv-byline">Estimates updated June 2026 by The North Texas Home Guide, from DFW plumber price lists and national cost surveys. Not a quote — always get a written, itemized bid.</p>
+</article>
+
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"Water Heater Replacement Cost Calculator for North Texas (2026)","description":"Estimate water heater replacement cost in Dallas-Fort Worth: tank vs tankless, gas vs electric, plus DFW code-upgrade items.","dateModified":"2026-06-11","author":{"@type":"Organization","name":"The North Texas Home Guide"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does water heater replacement cost in DFW?","acceptedAnswer":{"@type":"Answer","text":"Most standard 40-50 gallon tank replacements cost $1,200-$2,800 installed in 2026; like-for-like gas swaps usually land $1,300-$1,900. Tankless conversions run $4,500-$10,000."}},{"@type":"Question","name":"Do I need a permit to replace a water heater in Texas?","acceptedAnswer":{"@type":"Answer","text":"Yes - Texas requires a permit and a licensed plumber for water heater replacement, and most DFW cities inspect the work."}},{"@type":"Question","name":"Is tankless worth it in North Texas?","acceptedAnswer":{"@type":"Answer","text":"Tankless costs 2-4x more upfront but lasts roughly twice as long and saves space; it pays off most in larger households with high hot-water use."}}]}]</script>
+
+<script>
+(function () {
+  var BASE = { gas: [1300, 1900], electric: [1200, 2000], power: [1800, 2800], tankless: [4500, 10000] };
+  var LABEL = { gas: "gas tank", electric: "electric tank", power: "power-vent gas tank", tankless: "tankless conversion" };
+  var type = document.getElementById("wh-type"), code = document.getElementById("wh-code");
+  var rangeEl = document.getElementById("wh-range"), subEl = document.getElementById("wh-sub");
+  function money(n) { return "$" + (Math.round(n / 50) * 50).toLocaleString("en-US"); }
+  function compute() {
+    var b = BASE[type.value], low = b[0], high = b[1];
+    if (code.value === "1" && type.value !== "tankless") { low += 200; high += 600; }
+    rangeEl.textContent = money(low) + "–" + money(high);
+    subEl.textContent = "Estimated installed price · " + LABEL[type.value] + (code.value === "1" && type.value !== "tankless" ? " with code upgrades" : "");
+    rangeEl.classList.remove("pulse"); void rangeEl.offsetWidth; rangeEl.classList.add("pulse");
+  }
+  [type, code].forEach(function (el) { el.addEventListener("change", compute); });
+  compute();
+})();
+</script>
+{% endraw %}
