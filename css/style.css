@@ -397,7 +397,7 @@ tbody tr:hover { background: var(--teal-tint); }
 .sec-sub { color: var(--muted); margin: 0 0 1.2rem; max-width: 44rem; }
 .see-all { margin-top: 1rem; font-weight: 600; }
 
-.cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.1rem; margin-top: 1.2rem; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.2rem; }
 .cat-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; text-decoration: none; background: #fff; transition: transform .12s ease, box-shadow .12s ease; }
 .cat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(22,50,79,.12); }
 .cat-img { height: 124px; display: flex; align-items: flex-end; padding: .85rem 1rem; background-size: cover; background-position: center; position: relative; }
@@ -427,9 +427,11 @@ tbody tr:hover { background: var(--teal-tint); }
 @view-transition { navigation: auto; }
 html { scroll-behavior: smooth; }
 
+html { overflow-x: clip; }
 body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 h1, h2, .sec-title, .hero-band h1, .cta-band h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; letter-spacing: -0.015em; }
-.hero-band h1 { font-size: 2.7rem; line-height: 1.08; }
+.hero-band h1 { font-size: clamp(1.85rem, 5.2vw, 2.7rem); line-height: 1.1; }
+.cat-hero h1 { font-size: clamp(1.6rem, 4.6vw, 2.2rem); }
 .hero-sub { font-weight: 400; }
 table { font-variant-numeric: tabular-nums; }
 
@@ -454,4 +456,19 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, select:focus-visible 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
+}
+
+/* photo banner for ranking pages */
+.rank-hero { height: 210px; border-radius: 14px; background-size: cover; background-position: center 35%; margin: 0 0 1.5rem; }
+
+/* mobile fixes — appended last so they win the cascade */
+@media (max-width: 680px) {
+  .topbar .wrap { flex-direction: column; align-items: flex-start; gap: .3rem; padding-top: .7rem; padding-bottom: .7rem; }
+  .topbar nav { gap: .15rem .9rem; }
+  .topbar nav a { font-size: .88rem; }
+  .hero-eyebrow, .rv-eyebrow { letter-spacing: .04em; font-size: .72rem; }
+  .hero-band { padding: 2rem 1.3rem; }
+  .cat-hero { padding: 1.9rem 1.3rem; }
+  .rank-hero { height: 150px; }
+  .cta-band { padding: 1.3rem 1.3rem; }
 }
