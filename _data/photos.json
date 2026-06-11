@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "url": "https://images.pexels.com/photos/8278494/pexels-photo-8278494.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Colorful residential homes in Houston Heights neighborhood, Texas.",
+    "photographer": "Diego Ramirez",
+    "id": 8278494
+  },
+  "Heating & Cooling": {
+    "url": "https://images.pexels.com/photos/24828656/pexels-photo-24828656.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "A Ballu air conditioner condenser unit mounted on a building exterior, showcasing modern HVAC technology.",
+    "photographer": "Paolo Rossa",
+    "id": 24828656
+  },
+  "Plumbing & Systems": {
+    "url": "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Close-up of a plumber's hands installing steel pipes indoors, showcasing skilled manual work.",
+    "photographer": "Anıl Karakaya",
+    "id": 6419128
+  },
+  "Structure & Exterior": {
+    "url": "https://images.pexels.com/photos/37677476/pexels-photo-37677476.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Roofers working on brick home in Allen, Texas, addressing shingles and roofing materials.",
+    "photographer": "Ryan  Stephens",
+    "id": 37677476
+  },
+  "Outdoor": {
+    "url": "https://images.pexels.com/photos/922797/pexels-photo-922797.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Sunlit wooden fence and patio gate in a peaceful backyard setting.",
+    "photographer": "Gerritt Tisdale",
+    "id": 922797
+  },
+  "ac-replacement-cost-dfw": {
+    "url": "https://images.pexels.com/photos/7347538/pexels-photo-7347538.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "A technician skillfully repairing an outdoor air conditioning unit mounted on a building wall.",
+    "photographer": "Richard Low Hong",
+    "id": 7347538
+  },
+  "ac-repair-cost-dfw": {
+    "url": "https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "A technician is repairing an air conditioning unit on a rooftop, demonstrating skilled manual work.",
+    "photographer": "José Andrés  Pacheco Cortes",
+    "id": 5463581
+  },
+  "hvac-tune-up-cost-dfw": {
+    "url": "https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "A technician inspects an outdoor HVAC unit for maintenance.",
+    "photographer": "Kathleen Austin Kuhn",
+    "id": 32497161
+  },
+  "heat-pump-installation-cost-dfw": {
+    "url": "https://images.pexels.com/photos/20046692/pexels-photo-20046692.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Outdoor air conditioning unit mounted on a residential building exterior.",
+    "photographer": "alpha innotec",
+    "id": 20046692
+  },
+  "furnace-replacement-cost-dfw": {
+    "url": "https://images.pexels.com/photos/20046689/pexels-photo-20046689.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Efficient and innovative heat pump system in an indoor setting for advanced heating solutions.",
+    "photographer": "alpha innotec",
+    "id": 20046689
+  },
+  "water-heater-replacement-cost-dfw": {
+    "url": "https://images.pexels.com/photos/34938439/pexels-photo-34938439.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Technician installing or repairing a heating system in an indoor workshop setting.",
+    "photographer": "МОБО Модульные Котельные",
+    "id": 34938439
+  },
+  "roof-replacement-cost-dfw": {
+    "url": "https://images.pexels.com/photos/37677476/pexels-photo-37677476.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Roofers working on brick home in Allen, Texas, addressing shingles and roofing materials.",
+    "photographer": "Ryan  Stephens",
+    "id": 37677476
+  },
+  "plumbing-repair-costs-dfw": {
+    "url": "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Close-up of a plumber's hands installing steel pipes indoors, showcasing skilled manual work.",
+    "photographer": "Anıl Karakaya",
+    "id": 6419128
+  },
+  "electrical-panel-upgrade-cost-dfw": {
+    "url": "https://images.pexels.com/photos/31701039/pexels-photo-31701039.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "A senior woman is adjusting an electrical fuse panel indoors, demonstrating home safety.",
+    "photographer": "Kleison  Leopoldino",
+    "id": 31701039
+  },
+  "window-replacement-cost-dfw": {
+    "url": "https://images.pexels.com/photos/37176014/pexels-photo-37176014.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Scaffolding surrounds a new home under construction in Elk Grove, California.",
+    "photographer": "D Goug",
+    "id": 37176014
+  },
+  "fence-replacement-cost-dfw": {
+    "url": "https://images.pexels.com/photos/11903184/pexels-photo-11903184.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Residential backyard with wooden fence, shed, lawns, and tree shadows on a sunny day.",
+    "photographer": "Shazard R.",
+    "id": 11903184
+  },
+  "foundation-repair-cost-dfw": {
+    "url": "https://images.pexels.com/photos/37121405/pexels-photo-37121405.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Team of construction workers using power tools to level freshly poured concrete on a building site.",
+    "photographer": "SÀI GÒN CÔNG TY CP SẢN XUẤT - THƯƠNG MẠI",
+    "id": 37121405
+  },
+  "pool-maintenance-cost-dfw": {
+    "url": "https://images.pexels.com/photos/4177666/pexels-photo-4177666.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "alt": "Serene backyard featuring a swimming pool, lush garden, and wooden deck in Antalya, Turkey.",
+    "photographer": "Engin Akyurt",
+    "id": 4177666
+  }
+}

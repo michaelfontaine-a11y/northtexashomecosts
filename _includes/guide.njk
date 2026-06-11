@@ -5,6 +5,8 @@ layout: base.njk
   <p class="updated">Last updated: {{ updated | readableDate }}</p>
   <h1>{{ title }}</h1>
 
+  {% if photos and photos[page.fileSlug] %}<img class="guide-hero" src="{{ photos[page.fileSlug].url }}" alt="{{ photos[page.fileSlug].alt }}" loading="lazy">{% endif %}
+
   <div class="answer-box">{{ answer }}</div>
 
   <div class="guide-body">

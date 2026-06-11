@@ -407,6 +407,7 @@ tbody tr:hover { background: var(--teal-tint); }
 
 .cta-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.2rem; background: var(--teal-tint); border: 1px solid #bfe3e2; border-radius: 14px; padding: 1.6rem 1.8rem; margin: 3rem 0 1rem; }
 .cta-band h2 { color: var(--navy); margin: 0 0 .3rem; font-size: 1.5rem; }
+.guide-hero { width: 100%; height: auto; max-height: 340px; object-fit: cover; border-radius: 12px; margin: .4rem 0 1.5rem; display: block; }
 .cta-band p { color: var(--ink); margin: 0; max-width: 34rem; }
 
 @media (max-width: 640px) {
