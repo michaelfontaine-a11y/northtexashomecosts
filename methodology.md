@@ -1,13 +1,27 @@
 ---
-title: How We Price
-description: Where our DFW cost ranges come from, why North Texas prices differ from national averages, and how often guides are updated.
+title: How We Rank & Price
+description: How The North Texas Home Guide ranks HVAC companies, where our DFW cost ranges come from, and how often everything is updated.
 layout: base.njk
 permalink: /methodology/
 ---
 
-# How we build these numbers
+# How we rank companies and build our cost numbers
 
-Every range on this site is assembled the same way, and every guide lists its specific sources at the bottom. Here is the general method.
+We do two things: rank the best home-service companies city by city, and research what projects actually cost. Both are done in the open, and every page lists its sources.
+
+## How we rank HVAC companies
+
+Our city "best HVAC" lists score each company on five factors, weighted toward what matters for a major installation:
+
+- **Warranty coverage** — length of the labor warranty on a new install (most local installers cover 1–2 years; the best cover 10).
+- **Pricing transparency** — whether the company gives upfront, written or flat-rate pricing rather than vague "call for a quote."
+- **Installation & services** — breadth and depth of residential AC/heating installation and replacement work.
+- **Verified rating** — public Google and BBB star ratings and review counts.
+- **Licensing & certifications** — a current Texas TACL license and manufacturer/industry certifications.
+
+We list **real local competitors by name** with their real, sourced numbers — Google ratings, review counts, years in business, and license numbers pulled from each company's public profiles. **No company pays for placement**, and where a company we'd otherwise feature genuinely leads on a factor, it gets the credit. Ratings drift, so each list shows a "last updated" date and is reviewed monthly.
+
+Cost figures below are assembled separately. Here is that method.
 
 ## Where the ranges come from
 

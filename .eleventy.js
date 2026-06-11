@@ -16,7 +16,7 @@ module.exports = function (eleventyConfig) {
       headline: data.title,
       description: data.description,
       dateModified: new Date(data.updated).toISOString().slice(0, 10),
-      author: { "@type": "Organization", name: "North Texas Home Costs" },
+      author: { "@type": "Organization", name: "The North Texas Home Guide" },
     });
     if (Array.isArray(data.faqs) && data.faqs.length >= 2) {
       blocks.push({
@@ -34,6 +34,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("guides", (api) =>
     api.getFilteredByGlob("guides/*.md").sort((a, b) => (a.data.title || "").localeCompare(b.data.title || ""))
+  );
+
+  eleventyConfig.addCollection("reviews", (api) =>
+    api.getFilteredByGlob("reviews/*.njk").sort((a, b) => (a.data.sortOrder || 99) - (b.data.sortOrder || 99))
   );
 
   return {

@@ -1,0 +1,30 @@
+---
+title: Best HVAC Companies in North Texas, by City (2026)
+description: Independent rankings of the best HVAC and AC companies in Frisco, Plano, Carrollton, Prosper, Celina and Garland — scored on installation, pricing, warranty and verified ratings.
+layout: base.njk
+permalink: /best-hvac/
+---
+<section class="hero">
+  <h1>Best HVAC companies in North Texas, by city</h1>
+  <p>We rank Dallas–Fort Worth's HVAC contractors city by city on installation track record, pricing transparency, warranty coverage and verified ratings — every figure sourced, no paid placement. Pick your city below.</p>
+  <p class="hero-links"><a href="/methodology/">How we rank</a> &nbsp;·&nbsp; <a href="/tools/ac-cost-calculator/">Estimate your AC cost</a></p>
+</section>
+
+{% if collections.reviews.length %}
+<div class="cards">
+  {% for r in collections.reviews %}
+  <a class="card" href="{{ r.url }}">
+    <h3>Best HVAC in {{ r.data.cityName }}</h3>
+    <p>{{ r.data.cardBlurb }}</p>
+    <span class="meta-row"><span class="tag">{{ r.data.placement }}</span><span class="updated">Updated {{ r.data.updated | readableDate }}</span></span>
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty-note">City rankings are publishing now.</p>
+{% endif %}
+
+<section class="cat-group">
+  <h2>How we score every company</h2>
+  <p class="lede">Each ranking weighs installation and services, pricing transparency, warranty length, verified Google/BBB ratings and current Texas licensing. We list real local competitors by name with their real numbers — and we tell you exactly where each figure came from. Read the full <a href="/methodology/">methodology</a>.</p>
+</section>

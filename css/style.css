@@ -307,3 +307,73 @@ tbody tr:hover { background: var(--teal-tint); }
   .topbar .wrap { flex-direction: column; align-items: flex-start; }
   main.wrap { padding-top: 1.75rem; }
 }
+
+/* ================= Homepage helpers ================= */
+.section-divider { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 3rem; }
+.cat-head { color: var(--navy); margin: 1.75rem 0 0.6rem; font-size: 1.15rem; }
+
+/* ================= Best-HVAC review pages ================= */
+.rv-eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; color: var(--teal); margin: 0 0 .3rem; }
+.rv-lead { font-size: 1.12rem; line-height: 1.65; color: var(--ink); max-width: 46rem; }
+.rv-lead strong { color: var(--navy); }
+
+.rv-pick { background: var(--teal-tint); border: 1px solid #bfe3e2; border-left: 5px solid var(--teal); border-radius: 12px; padding: 1.2rem 1.35rem; margin: 1.6rem 0; }
+.rv-pick-badge { display: inline-block; background: var(--teal); color: #fff; font-weight: 700; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 999px; }
+.rv-pick h2 { margin: .7rem 0 .2rem; }
+.rv-pick-meta { font-weight: 600; color: var(--navy); margin: .15rem 0 .55rem; }
+.rv-pick ul { margin: .4rem 0 .8rem; padding-left: 1.15rem; }
+.rv-pick li { margin: .25rem 0; }
+.rv-cta-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: .7rem 0 .3rem; }
+
+.btn { display: inline-block; font-weight: 700; text-decoration: none; padding: .6rem 1.05rem; border-radius: 8px; font-size: .95rem; }
+.btn-primary { background: var(--teal); color: #fff; }
+.btn-ghost { background: #fff; color: var(--navy); border: 1.5px solid var(--teal); }
+.btn-navy { background: var(--navy); color: #fff; }
+
+.rv-method { background: var(--stripe); border-radius: 10px; padding: 1rem 1.15rem; margin: 1.6rem 0; }
+.rv-method h2 { margin-top: .2rem; }
+.rv-weights { font-size: .9rem; color: var(--muted); }
+
+.rv-award-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .75rem; }
+.rv-award { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .8rem .85rem; }
+.rv-award-title { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; color: var(--teal); }
+.rv-award-co { font-weight: 700; color: var(--navy); margin-top: .2rem; line-height: 1.25; }
+.rv-award-note { font-size: .82rem; color: var(--muted); margin-top: .15rem; }
+
+.rv-card { display: flex; gap: 1rem; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.05rem 1.1rem; margin: .8rem 0; }
+.rv-card-pick { border-color: var(--teal); border-width: 2px; background: var(--teal-tint); }
+.rv-rank { font-size: 1.35rem; font-weight: 800; color: var(--teal); min-width: 2.3rem; }
+.rv-card-body { flex: 1; }
+.rv-card-body h3 { margin: 0 0 .3rem; }
+.rv-pick-tag { display: inline-block; background: var(--teal); color: #fff; font-size: .64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: .15rem .5rem; border-radius: 999px; vertical-align: middle; margin-left: .4rem; }
+.rv-meta { color: var(--muted); font-size: .92rem; margin: .1rem 0 .45rem; }
+.rv-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: .35rem 0; }
+.rv-tag { background: var(--stripe); color: var(--ink); font-size: .76rem; padding: .2rem .55rem; border-radius: 6px; }
+.rv-chip { background: var(--navy); color: #fff; font-size: .76rem; font-weight: 600; padding: .2rem .55rem; border-radius: 6px; }
+.rv-pros { margin: .45rem 0 .35rem; padding-left: 1.1rem; font-size: .92rem; }
+.rv-pros li { margin: .2rem 0; }
+.rv-tel { font-weight: 700; color: var(--teal); text-decoration: none; }
+
+.rv-cta { background: var(--navy); color: #fff; border-radius: 12px; padding: 1.3rem 1.35rem; margin: 2rem 0; }
+.rv-cta h2 { color: #fff; margin-top: 0; }
+.rv-cta p { color: #d7e3ee; }
+.rv-cta .btn-primary { background: #fff; color: var(--navy); }
+
+.rv-also ul { list-style: none; padding: 0; }
+.rv-also li { padding: .55rem 0; border-bottom: 1px solid var(--line); font-size: .94rem; }
+.rv-also .pro { color: var(--muted); font-size: .87rem; }
+
+.rv-q { margin: .85rem 0; }
+.rv-q h3 { margin: 0 0 .2rem; }
+.rv-byline { margin-top: 2.2rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .82rem; color: var(--muted); }
+
+/* ================= AC cost calculator ================= */
+.calc { background: var(--stripe); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem 1.4rem; margin: 1.6rem 0; }
+.calc-row { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; }
+.calc-field { flex: 1; min-width: 13rem; }
+.calc-field label { display: block; font-weight: 700; color: var(--navy); margin-bottom: .35rem; font-size: .92rem; }
+.calc-field select, .calc-field input { width: 100%; padding: .6rem .7rem; border: 1px solid var(--line); border-radius: 8px; font-size: 1rem; background: #fff; }
+.calc-result { margin-top: 1.3rem; background: #fff; border: 2px solid var(--teal); border-radius: 12px; padding: 1.1rem 1.2rem; text-align: center; }
+.calc-range { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
+.calc-sub { color: var(--muted); font-size: .92rem; margin-top: .3rem; }
+.calc-cta { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }

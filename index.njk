@@ -1,13 +1,29 @@
 ---
-title: What home projects really cost in DFW
-description: Researched cost ranges for home repairs and upgrades across North Texas. Updated regularly, no lead-gen forms, no inflated "free quote" funnels.
+title: The best home-service companies in North Texas — and what they cost
+description: Independent rankings of the best HVAC and home-service companies across Dallas–Fort Worth, plus researched cost ranges for major home projects. Published methodology, no lead-gen funnels.
 layout: base.njk
 ---
 <section class="hero">
-  <h1>What home repairs and upgrades actually cost in North Texas</h1>
-  <p>Researched ranges, updated regularly, no lead-gen forms. We aggregate contractor price lists, permit data, and published industry pricing for the Dallas–Fort Worth market so you can walk into a bid knowing what's normal.</p>
-  <p class="hero-links"><a href="/methodology/">How we build these numbers</a></p>
+  <h1>The best home-service pros in North Texas — and what the work actually costs</h1>
+  <p>We rank Dallas–Fort Worth's HVAC and home-service companies on a published methodology, and research real installed-cost ranges so you can walk into any bid knowing what's normal. No lead-gen forms, no inflated "free quote" funnels.</p>
+  <p class="hero-links"><a href="/best-hvac/">Best HVAC by city</a> &nbsp;·&nbsp; <a href="/tools/ac-cost-calculator/">Estimate your AC cost</a> &nbsp;·&nbsp; <a href="/methodology/">How we rank</a></p>
 </section>
+
+{% if collections.reviews.length %}
+<section class="cat-group">
+  <h2>Best HVAC companies by city</h2>
+  <p class="lede">Each city ranking weighs installation track record, pricing transparency, warranty and verified ratings — sources cited, updated monthly.</p>
+  <div class="cards">
+    {% for r in collections.reviews %}
+    <a class="card" href="{{ r.url }}">
+      <h3>{{ r.data.cityName }} HVAC companies</h3>
+      <p>{{ r.data.cardBlurb }}</p>
+      <span class="meta-row"><span class="tag">{{ r.data.placement }}</span><span class="updated">Updated {{ r.data.updated | readableDate }}</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 {% if collections.guides.length %}
   {% set cats = [] %}
@@ -17,9 +33,10 @@ layout: base.njk
     {% endif %}
   {% endfor %}
 
+  <h2 class="section-divider">Home project cost guides</h2>
   {% for cat in cats %}
   <section class="cat-group">
-    <h2>{{ cat }}</h2>
+    <h3 class="cat-head">{{ cat }}</h3>
     <div class="cards">
       {% for g in collections.guides %}
         {% if g.data.category == cat %}
@@ -40,7 +57,7 @@ layout: base.njk
   {% endfor %}
   {% if uncategorized.length %}
   <section class="cat-group">
-    <h2>More guides</h2>
+    <h3 class="cat-head">More guides</h3>
     <div class="cards">
       {% for g in uncategorized %}
       <a class="card" href="{{ g.url }}">
@@ -52,8 +69,4 @@ layout: base.njk
     </div>
   </section>
   {% endif %}
-{% else %}
-<section class="cat-group">
-  <p class="empty-note">First cost guides are in research now. Check back soon, or read <a href="/methodology/">how we price</a> in the meantime.</p>
-</section>
 {% endif %}
