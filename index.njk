@@ -1,22 +1,59 @@
 ---
 title: The best home-service companies in North Texas — and what they cost
-description: Independent rankings of the best HVAC and home-service companies across Dallas–Fort Worth, plus researched cost ranges for major home projects. Published methodology, no lead-gen funnels.
+description: Independent rankings of the best HVAC, plumbing, roofing and home-service companies across Dallas–Fort Worth, plus researched cost ranges for major home projects. Published methodology, no lead-gen funnels.
 layout: base.njk
 ---
-<section class="hero">
-  <h1>The best home-service pros in North Texas — and what the work actually costs</h1>
-  <p>We rank Dallas–Fort Worth's HVAC and home-service companies on a published methodology, and research real installed-cost ranges so you can walk into any bid knowing what's normal. No lead-gen forms, no inflated "free quote" funnels.</p>
-  <p class="hero-links"><a href="/best-hvac/">Best HVAC by city</a> &nbsp;·&nbsp; <a href="/tools/ac-cost-calculator/">Estimate your AC cost</a> &nbsp;·&nbsp; <a href="/methodology/">How we rank</a></p>
+{% set catMeta = {
+  "Heating & Cooling": { color: "#0e7c7b", blurb: "AC replacement & repair, furnaces, heat pumps, tune-ups." },
+  "Plumbing & Systems": { color: "#1d6fa5", blurb: "Water heaters, repairs, electrical panels and home systems." },
+  "Structure & Exterior": { color: "#8a5a3c", blurb: "Roofing, foundation, windows and exterior work." },
+  "Outdoor": { color: "#3b7a3b", blurb: "Fencing, pools and outdoor living projects." }
+} %}
+
+<section class="hero-band">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Dallas–Fort Worth · Independent home-services guide</p>
+    <h1>Find the best home-service pros in North Texas — and know the price first</h1>
+    <p class="hero-sub">We rank local HVAC, plumbing, roofing and home-service companies on a published methodology, and research what the work actually costs — so you can hire with confidence and walk into any bid knowing what's normal. No lead-gen forms.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/best-hvac/">Find a pro</a>
+      <a class="btn btn-ghost-light" href="/guides/">See what it costs</a>
+    </div>
+  </div>
 </section>
 
+{% if collections.guides.length %}
+{% set cats = [] %}
+{% for g in collections.guides %}
+  {% if g.data.category and cats.indexOf(g.data.category) == -1 %}{% set _ = cats.push(g.data.category) %}{% endif %}
+{% endfor %}
+<section>
+  <h2 class="sec-title">Browse by home service</h2>
+  <div class="cat-grid">
+    {% for cat in cats %}
+      {% set count = 0 %}
+      {% for g in collections.guides %}{% if g.data.category == cat %}{% set count = count + 1 %}{% endif %}{% endfor %}
+      {% set m = catMeta[cat] %}
+      <a class="cat-card" href="/guides/">
+        <div class="cat-img" style="background-color: {{ m.color if m else '#16324f' }}"><span>{{ cat }}</span></div>
+        <div class="cat-body">
+          <p class="cat-blurb">{{ m.blurb if m else 'Researched cost guides for North Texas homeowners.' }}</p>
+          <span class="cat-count">{{ count }} cost guide{{ 's' if count != 1 }} →</span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% if collections.reviews.length %}
-<section class="cat-group">
-  <h2>Best HVAC companies by city</h2>
-  <p class="lede">Each city ranking weighs installation track record, pricing transparency, warranty and verified ratings — sources cited, updated monthly.</p>
+<section>
+  <h2 class="sec-title">Best HVAC companies, by city</h2>
+  <p class="sec-sub">Independent rankings on installation, pricing, warranty and verified ratings — sources cited, updated monthly.</p>
   <div class="cards">
     {% for r in collections.reviews %}
     <a class="card" href="{{ r.url }}">
-      <h3>{{ r.data.cityName }} HVAC companies</h3>
+      <h3>Best HVAC in {{ r.data.cityName }}</h3>
       <p>{{ r.data.cardBlurb }}</p>
       <span class="meta-row"><span class="tag">{{ r.data.placement }}</span><span class="updated">Updated {{ r.data.updated | readableDate }}</span></span>
     </a>
@@ -26,47 +63,27 @@ layout: base.njk
 {% endif %}
 
 {% if collections.guides.length %}
-  {% set cats = [] %}
-  {% for g in collections.guides %}
-    {% if g.data.category and cats.indexOf(g.data.category) == -1 %}
-      {% set _ = cats.push(g.data.category) %}
-    {% endif %}
-  {% endfor %}
-
-  <h2 class="section-divider">Home project cost guides</h2>
-  {% for cat in cats %}
-  <section class="cat-group">
-    <h3 class="cat-head">{{ cat }}</h3>
-    <div class="cards">
-      {% for g in collections.guides %}
-        {% if g.data.category == cat %}
-        <a class="card" href="{{ g.url }}">
-          <h3>{{ g.data.title }}</h3>
-          <p>{{ g.data.description }}</p>
-          <span class="updated">Updated {{ g.data.updated | readableDate }}</span>
-        </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-  {% endfor %}
-
-  {% set uncategorized = [] %}
-  {% for g in collections.guides %}
-    {% if not g.data.category %}{% set _ = uncategorized.push(g) %}{% endif %}
-  {% endfor %}
-  {% if uncategorized.length %}
-  <section class="cat-group">
-    <h3 class="cat-head">More guides</h3>
-    <div class="cards">
-      {% for g in uncategorized %}
+<section>
+  <h2 class="sec-title">Popular cost guides</h2>
+  <div class="cards">
+    {% for g in collections.guides | reverse %}
+      {% if loop.index <= 6 %}
       <a class="card" href="{{ g.url }}">
         <h3>{{ g.data.title }}</h3>
         <p>{{ g.data.description }}</p>
-        <span class="updated">Updated {{ g.data.updated | readableDate }}</span>
+        <span class="meta-row">{% if g.data.category %}<span class="tag">{{ g.data.category }}</span>{% endif %}<span class="updated">Updated {{ g.data.updated | readableDate }}</span></span>
       </a>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <p class="see-all"><a href="/guides/">All {{ collections.guides.length }} cost guides →</a></p>
+</section>
 {% endif %}
+
+<section class="cta-band">
+  <div>
+    <h2>Estimate your new AC in 30 seconds</h2>
+    <p>See what a replacement costs for your North Texas home — by size, efficiency and ductwork. No email, no sales call.</p>
+  </div>
+  <a class="btn btn-primary" href="/tools/ac-cost-calculator/">Open the calculator →</a>
+</section>
