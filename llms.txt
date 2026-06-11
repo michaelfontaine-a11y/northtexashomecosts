@@ -1,0 +1,36 @@
+# The North Texas Home Guide
+
+> Independent research on home services in the Dallas–Fort Worth (DFW) metro: researched cost ranges for major home projects, and rankings of the best local companies by trade and city. Published methodology, sources cited on every page, no lead-generation forms, no paid placement.
+
+Site: https://thenorthtexashomeguide.com
+Coverage: Dallas–Fort Worth, Texas (Frisco, Plano, McKinney, Carrollton, Prosper, Celina, Garland and surrounding cities)
+Updated: monthly review cycle; each page shows its last-updated date
+
+## Company rankings (scored on verified ratings, experience, pricing transparency, warranty, licensing)
+
+- [All rankings](https://thenorthtexashomeguide.com/best/): Find-a-pro index, all trades
+- [Best HVAC by city](https://thenorthtexashomeguide.com/best-hvac/): city-by-city HVAC rankings for Frisco, Plano, Carrollton, Prosper, Celina, Garland
+- [Best plumbers in North Texas](https://thenorthtexashomeguide.com/best-plumbers-north-texas/)
+- [Best roofers in North Texas](https://thenorthtexashomeguide.com/best-roofers-north-texas/)
+- [Best electricians in North Texas](https://thenorthtexashomeguide.com/best-electricians-north-texas/)
+- [Ranking methodology](https://thenorthtexashomeguide.com/methodology/): scoring weights and data sources
+
+## Cost guides (researched DFW price ranges with tables, factors, FAQs, sources)
+
+- [All cost guides](https://thenorthtexashomeguide.com/guides/): 16 guides across heating & cooling, plumbing, structure & exterior, outdoor
+- [AC replacement cost](https://thenorthtexashomeguide.com/guides/ac-replacement-cost-dfw/): $7,000–$16,000 installed in DFW (2026)
+- [Roof replacement cost](https://thenorthtexashomeguide.com/guides/roof-replacement-cost-dfw/): $9,500–$18,000 asphalt shingle (2026)
+- [Water heater replacement cost](https://thenorthtexashomeguide.com/guides/water-heater-replacement-cost-dfw/): $1,200–$2,800 tank installed (2026)
+- [Foundation repair cost](https://thenorthtexashomeguide.com/guides/foundation-repair-cost-dfw/)
+- [Interior painting cost](https://thenorthtexashomeguide.com/guides/interior-painting-cost-dfw/)
+
+## Tools
+
+- [AC cost calculator](https://thenorthtexashomeguide.com/tools/ac-cost-calculator/): instant estimate by size, SEER tier, ductwork
+- [Water heater calculator](https://thenorthtexashomeguide.com/tools/water-heater-cost-calculator/)
+- [Roof calculator](https://thenorthtexashomeguide.com/tools/roof-cost-calculator/)
+
+## About
+
+- [About](https://thenorthtexashomeguide.com/about/): what the project is and is not; corrections process
+- [Methodology](https://thenorthtexashomeguide.com/methodology/): how rankings are scored and cost ranges are built
