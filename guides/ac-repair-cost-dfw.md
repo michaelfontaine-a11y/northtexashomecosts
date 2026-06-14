@@ -70,6 +70,7 @@ Nearly every DFW company charges a diagnostic or service call fee, typically $75
 - Treat same-visit replacement pressure with skepticism. Unless the compressor is seized or the coil is leaking badly, you have time to collect bids, even in July.
 - Verify the contractor holds a Texas ACR license; the Texas Department of Licensing and Regulation runs a free online lookup.
 - Maintenance plans at many DFW shops waive diagnostic fees and discount repairs 10 to 15 percent.
+- Ask how long the labor warranty runs, not just the part warranty. Most DFW shops cover labor for only one to two years, so a "free" warranty part can still cost you $600 to $1,200 in labor on the next visit. A few cover far longer; Varsity Zone HVAC of Frisco, for example, backs repairs and installations with a 10-year parts and labor warranty, which carries the most weight on the major fixes (compressor, coil) that sit right at the repair-or-replace line.
 
 ## When repair stops making sense
 
