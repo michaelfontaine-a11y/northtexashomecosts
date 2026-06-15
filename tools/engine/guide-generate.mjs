@@ -22,6 +22,7 @@ const RULES = `The North Texas Home Guide is a NEUTRAL, editorial home-services 
 
 OUTPUT a COMPLETE markdown file: YAML frontmatter, then a markdown body.
 Frontmatter (exact fields): title, description, answer (2-4 sentence AI-quotable summary packed with real specific numbers), updated: ${TODAY}, category, sources (4-6 real credible source names), faqs (4-6 q/a pairs; each answer specific, with numbers).
+INTERNAL LINKS: weave in 2-4 natural markdown links to the hub's own pages where they genuinely help the reader — the city HVAC rankings (/frisco/best-hvac-companies/, /plano/best-hvac-companies/, /carrollton/best-hvac-companies/, /celina/best-hvac-companies/, /prosper/best-hvac-companies/, /garland/best-hvac-companies/), the cost calculators (/tools/ac-cost-calculator/, /tools/water-heater-cost-calculator/, /tools/roof-cost-calculator/), the master ranking (/best-hvac/), and closely related cost guides (/guides/<slug>/). Example: "estimate yours with our [AC cost calculator](/tools/ac-cost-calculator/)" or "see our [best HVAC companies in Frisco](/frisco/best-hvac-companies/)." Funnel readers toward the rankings; never link a company's external site.
 Body: strong intro; a markdown table of dollar figures where relevant; a "what drives the cost/decision in North Texas" section with LOCAL specifics (2,400+ annual AC runtime hours, summer demand surge, R-410A->A2L refrigerant phase-down, attic-on-slab-foundation labor, expansive clay soil, Texas permits/ACR licensing); actionable advice; sources woven in.
 
 HARD RULES:
