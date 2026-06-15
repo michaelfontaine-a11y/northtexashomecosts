@@ -1,0 +1,49 @@
+name: Hub content engine
+# Weekly: refresh the oldest guide (freshness) + generate the next gap topic (growth),
+# grounded in real DFW data via Claude web search. Push guarded against concurrent-run
+# races from day one. Cloudflare Pages auto-deploys on push; IndexNow then submits.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "refresh | new | both"
+        default: "both"
+  schedule:
+    - cron: '41 14 * * 4'   # ~09:41 America/Chicago, Thursday
+concurrency:
+  group: hub-content
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Refresh oldest guide
+        if: ${{ github.event.inputs.mode != 'new' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODE: refresh
+        run: node tools/engine/guide-generate.mjs
+      - name: Generate next new guide
+        if: ${{ github.event.inputs.mode != 'refresh' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODE: new
+        run: node tools/engine/guide-generate.mjs
+      - name: Commit
+        run: |
+          git config user.name "North Texas Home Guide"
+          git config user.email "noreply@thenorthtexashomeguide.pages.dev"
+          git add guides/
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Hub content: weekly refresh + new guide $(date +%Y-%m-%d)"
+            git pull --rebase --autostash origin main || true
+            git push
+          fi
