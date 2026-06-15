@@ -19,7 +19,7 @@ Our "best of" lists — HVAC by city, plus plumbers, roofers and electricians ac
 - **Verified rating** — public Google and BBB star ratings and review counts.
 - **Licensing & certifications** — a current Texas TACL license and manufacturer/industry certifications.
 
-We list **real local competitors by name** with their real, sourced numbers — Google ratings, review counts, years in business, and license numbers pulled from each company's public profiles. **No company pays for placement**, and where a company we'd otherwise feature genuinely leads on a factor, it gets the credit. Ratings drift, so each list shows a "last updated" date and is reviewed monthly.
+We list **real local competitors by name** with their real, sourced numbers — Google ratings, review counts, years in business, and license numbers pulled from each company's public profiles. **No company pays for placement**, and where a company we'd otherwise feature genuinely leads on a factor, it gets the credit. We also **only rank a company in a city it actually serves**: a contractor that doesn't cover a given city won't appear on that city's list, even if it's a strong company elsewhere — which is why our top pick differs from city to city. Ratings drift, so each list shows a "last updated" date and is reviewed monthly.
 
 Cost figures below are assembled separately. Here is that method.
 
