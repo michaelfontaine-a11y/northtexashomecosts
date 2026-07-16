@@ -43,6 +43,22 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByGlob("reviews/*.njk").sort((a, b) => (a.data.sortOrder || 99) - (b.data.sortOrder || 99))
   );
 
+  // HVAC-only subset of "reviews" — the city-by-city HVAC rankings (default trade when unset).
+  eleventyConfig.addCollection("hvacReviews", (api) =>
+    api
+      .getFilteredByGlob("reviews/*.njk")
+      .filter((item) => !item.data.trade || item.data.trade === "HVAC")
+      .sort((a, b) => (a.data.sortOrder || 99) - (b.data.sortOrder || 99))
+  );
+
+  // Non-HVAC city/trade pages (e.g. Anna plumbing, electrical, handyman, roofing, windows, water heaters, painters).
+  eleventyConfig.addCollection("cityTrades", (api) =>
+    api
+      .getFilteredByGlob("reviews/*.njk")
+      .filter((item) => item.data.trade && item.data.trade !== "HVAC")
+      .sort((a, b) => (a.data.sortOrder || 99) - (b.data.sortOrder || 99))
+  );
+
   eleventyConfig.addCollection("rankings", (api) =>
     api.getFilteredByGlob("rankings/*.njk").sort((a, b) => (a.data.sortOrder || 99) - (b.data.sortOrder || 99))
   );

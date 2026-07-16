@@ -10,9 +10,9 @@ permalink: /best-hvac/
   <p class="hero-links"><a href="/methodology/">How we rank</a> &nbsp;·&nbsp; <a href="/tools/ac-cost-calculator/">Estimate your AC cost</a></p>
 </section>
 
-{% if collections.reviews.length %}
+{% if collections.hvacReviews.length %}
 <div class="cards">
-  {% for r in collections.reviews %}
+  {% for r in collections.hvacReviews %}
   <a class="card" href="{{ r.url }}">
     <h3>Best HVAC in {{ r.data.cityName }}</h3>
     <p>{{ r.data.cardBlurb }}</p>

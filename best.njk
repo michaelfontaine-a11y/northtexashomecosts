@@ -24,14 +24,34 @@ permalink: /best/
 </section>
 {% endif %}
 
-{% if collections.reviews.length %}
+{% if collections.hvacReviews.length %}
 <section>
   <h2 class="sec-title">HVAC, city by city</h2>
   <p class="sec-sub">Cooling is DFW's biggest home-system expense, so HVAC gets the deepest coverage — one ranking per city.</p>
   <div class="cards">
-    {% for r in collections.reviews %}
+    {% for r in collections.hvacReviews %}
     <a class="card" href="{{ r.url }}">
       <h3>Best HVAC in {{ r.data.cityName }}</h3>
+      <p>{{ r.data.cardBlurb }}</p>
+      <span class="meta-row"><span class="tag">{{ r.data.placement }}</span><span class="updated">Updated {{ r.data.updated | readableDate }}</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if collections.cityTrades.length %}
+{% set tradeCities = [] %}
+{% for r in collections.cityTrades %}
+  {% if r.data.cityName and tradeCities.indexOf(r.data.cityName) == -1 %}{% set _ = tradeCities.push(r.data.cityName) %}{% endif %}
+{% endfor %}
+<section>
+  <h2 class="sec-title">More trades, city by city</h2>
+  <p class="sec-sub">Beyond HVAC, we're expanding into other trades one city at a time — currently covering {{ tradeCities | join(", ") }}.</p>
+  <div class="cards">
+    {% for r in collections.cityTrades %}
+    <a class="card" href="{{ r.url }}">
+      <h3>{{ r.data.title }}</h3>
       <p>{{ r.data.cardBlurb }}</p>
       <span class="meta-row"><span class="tag">{{ r.data.placement }}</span><span class="updated">Updated {{ r.data.updated | readableDate }}</span></span>
     </a>
